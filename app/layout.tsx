@@ -1,33 +1,20 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+// /app/layout.tsx
+import './globals.css';
+import { Inter } from 'next/font/google';
+import ReduxProvider from './components/ReduxProvider';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Skip Selector",
-  description: "Select desired skip",
+export const metadata = {
+  title: 'Skip Hire App',
+  description: 'Book a skip in a few easy steps',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={inter.className}>
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );
