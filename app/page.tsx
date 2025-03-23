@@ -5,8 +5,8 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [skips, setSkips] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
   const [selectedSkip, setSelectedSkip] = useState<any | null>(null);
 
   useEffect(() => {
@@ -18,9 +18,7 @@ export default function Home() {
         }
         const data = await response.json();
         setSkips(data);
-        setLoading(false);
       } catch (err) {
-        setLoading(false);
       }
     };
     fetchSkips();
