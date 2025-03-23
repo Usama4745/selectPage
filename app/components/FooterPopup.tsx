@@ -1,21 +1,21 @@
 // /components/FooterPopup.tsx
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useAppSelector, useAppDispatch } from '../store/hooks';
-import { setSelectedSkip } from '../store/bookingSlice';
+import { Skip } from '../types';
 
-export default function FooterPopup() {
-  const router = useRouter();
-  const dispatch = useAppDispatch();
-  const selectedSkip = useAppSelector((state) => state.booking.selectedSkip);
+interface FooterPopupProps {
+  selectedSkip: Skip | null;
+  setSelectedSkip: (skip: Skip | null) => void;
+}
 
+export default function FooterPopup({ selectedSkip, setSelectedSkip }: FooterPopupProps) {
   const handleClose = () => {
-    dispatch(setSelectedSkip(null));
+    setSelectedSkip(null);
   };
 
   const handleConfirm = () => {
-    router.push('/permit-check');
+    alert(`You have selected a ${selectedSkip?.size} Yard Skip for £${selectedSkip?.price_before_vat} / week + VAT.`);
+    setSelectedSkip(null); // Clear the selection
   };
 
   if (!selectedSkip) return null;

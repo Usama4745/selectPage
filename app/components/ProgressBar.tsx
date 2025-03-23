@@ -8,7 +8,7 @@ interface ProgressBarProps {
 }
 
 const steps = [
-  { label: 'Select Skip', path: '/select-skip' }
+  { label: 'Select Skip', path: '/select-skip' },
 ];
 
 export default function ProgressBar({ currentStep }: ProgressBarProps) {
@@ -22,7 +22,7 @@ export default function ProgressBar({ currentStep }: ProgressBarProps) {
             <div key={step.label} className="flex items-center">
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                  currentStep >= index + 1 ? 'bg-cyan-600 text-white' : 'bg-gray-600 text-white'
+                  currentStep > index ? 'bg-cyan-600 text-white' : 'bg-gray-600 text-white'
                 } cursor-pointer`}
                 onClick={() => router.push(step.path)}
               >
@@ -30,14 +30,11 @@ export default function ProgressBar({ currentStep }: ProgressBarProps) {
               </div>
               <span
                 className={`ml-2 font-bold ${
-                  currentStep >= index + 1 ? 'text-white' : 'text-gray-400'
+                  currentStep > index ? 'text-white' : 'text-gray-400'
                 }`}
               >
                 {step.label}
               </span>
-              {index < steps.length - 1 && (
-                <div className="h-1 w-16 mx-2 bg-gray-600" />
-              )}
             </div>
           ))}
         </div>

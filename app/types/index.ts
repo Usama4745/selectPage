@@ -9,10 +9,5 @@ export interface Skip {
   }
   
   export interface BookingState {
-    postcode: string;
-    area: string;
-    wasteType: string;
     selectedSkip: Skip | null;
-    permitRequired: boolean;
-    selectedDate: string | null;
   }

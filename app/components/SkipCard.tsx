@@ -3,26 +3,28 @@
 
 import Image from 'next/image';
 import { Skip } from '../types';
-import { useAppDispatch } from '../store/hooks';
-import { setSelectedSkip } from '../store/bookingSlice';
 
 interface SkipCardProps {
   skip: Skip;
+  setSelectedSkip: (skip: Skip | null) => void;
+  selectedSkip: Skip | null;
 }
 
-export default function SkipCard({ skip }: SkipCardProps) {
-  const dispatch = useAppDispatch();
-
+export default function SkipCard({ skip, setSelectedSkip, selectedSkip }: SkipCardProps) {
   const handleSelect = () => {
-    dispatch(setSelectedSkip(skip));
+    setSelectedSkip(skip);
   };
+
+  // Check if this skip is the currently selected one
+  const isSelected = selectedSkip && selectedSkip.id === skip.id;
 
   return (
     <div
       onClick={handleSelect}
-      className="group relative rounded-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 
-        border-[#2A2A2A] hover:border-[#0037C1]/50 
-        bg-[#1C1C1C] text-white cursor-pointer"
+      className={`group relative rounded-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 
+        border-4 ${isSelected ? 'border-cyan-600' : 'border-[#2A2A2A]'} 
+        
+        bg-[#1C1C1C] text-white cursor-pointer`}
     >
       <div className="relative">
         <Image
