@@ -15,6 +15,8 @@ export default function SkipCard({ skip, setSelectedSkip, selectedSkip }: SkipCa
     setSelectedSkip(skip);
   };
 
+  console.log("check ")
+  console.log(skip)
   // Check if this skip is the currently selected one
   const isSelected = selectedSkip && selectedSkip.id === skip.id;
 

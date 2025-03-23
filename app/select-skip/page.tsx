@@ -26,13 +26,16 @@ export default function SelectSkipPage() {
         }
         const data = await response.json();
 
+        console.log("consoe data")
+        console.log(data)
+
         const mappedSkips: Skip[] = data.map((item: any) => ({
           id: item.id,
           size: item.size,
           hire_period_days: item.hire_period_days,
           price_before_vat: item.price_before_vat,
-          allows_heavy_waste: item.allowsHeavyWaste,
-          allowed_on_road: item.allowedOnRoad,
+          allows_heavy_waste: item.allows_heavy_waste,
+          allowed_on_road: item.allowed_on_road,
         }));
 
         setSkips(mappedSkips);
