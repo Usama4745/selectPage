@@ -23,7 +23,7 @@ export default function SkipCard({ skip, setSelectedSkip, selectedSkip }: SkipCa
   return (
     <div
       onClick={handleSelect}
-      className={`group relative rounded-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 
+      className={`group relative rounded-lg transition bg-gray-800 delay-150 duration-300 ease-in-out hover:-translate-y-1 
         border-4 ${isSelected ? 'border-cyan-600' : 'border-[#2A2A2A]'} 
         
         bg-[#1C1C1C] text-white cursor-pointer`}
