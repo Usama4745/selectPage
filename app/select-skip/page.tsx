@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import SkipCard from '../components/SkipCard';
 import FooterPopup from '../components/FooterPopup';
+import ProgressBar from '../components/ProgressBar';
 import { Skip } from '../types';
 
 export default function SelectSkipPage() {
@@ -47,6 +48,7 @@ export default function SelectSkipPage() {
 
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <ProgressBar currentStep={3} /> {/* Add ProgressBar with currentStep=3 */}
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen pt-20 pb-20 gap-16 sm:p-20">
         <div className="text-white text-3xl">Choose Your Skip Size</div>
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -63,7 +65,7 @@ export default function SelectSkipPage() {
                   key={skip.id}
                   skip={skip}
                   setSelectedSkip={setSelectedSkip}
-                  selectedSkip={selectedSkip} // Pass selectedSkip to SkipCard
+                  selectedSkip={selectedSkip}
                 />
               ))}
             </div>
