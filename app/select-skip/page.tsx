@@ -26,9 +26,6 @@ export default function SelectSkipPage() {
         }
         const data = await response.json();
 
-        console.log("consoe data")
-        console.log(data)
-
         const mappedSkips: Skip[] = data.map((item: any) => ({
           id: item.id,
           size: item.size,
