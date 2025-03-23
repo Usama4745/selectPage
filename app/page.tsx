@@ -19,6 +19,7 @@ export default function Home() {
         const data = await response.json();
         setSkips(data);
       } catch (err) {
+        console.log(err)
       }
     };
     fetchSkips();
