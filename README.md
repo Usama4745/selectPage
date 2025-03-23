@@ -8,7 +8,7 @@ This project focuses on the redesign and development of the Select Page UI in a 
 
 ## Demo
 
-[Live Demo Link](https://your-demo-link-here)
+[Live Demo Link](https://selectpage.vercel.app/select-skip)
 
 ### Demo Video
 
@@ -16,11 +16,30 @@ This project focuses on the redesign and development of the Select Page UI in a 
 
 ## Key Improvements
 
-- **Enhanced Tags System**: Added new tags in JSON such as "Allowed on road" and "Heavy waste OK"
-- **Fixed Duplication Issue**: Removed duplicate size information that previously appeared in both title and tags
-- **Improved Visual Design**: Implemented new animations and color schemes for better readability
-- **Bug Fixes**: Resolved critical bug preventing users from deselecting already selected cards
-- **Redesigned Footer Popup**: Improved layout and functionality of the footer popup
+### Enhanced Tags System
+Added new tags in JSON such as "Allowed on road" and "Heavy waste OK"
+
+![Tags System](https://via.placeholder.com/600x300)
+
+### Fixed Duplication Issue
+Removed duplicate size information that previously appeared in both title and tags
+
+![Duplication Fix](https://via.placeholder.com/600x300)
+
+### Improved Visual Design
+Implemented new animations and color schemes for better readability
+
+![Visual Design](https://via.placeholder.com/600x300)
+
+### Bug Fixes
+Resolved critical bug preventing users from deselecting already selected cards
+
+![Bug Fix Demonstration](https://via.placeholder.com/600x300)
+
+### Redesigned Footer Popup
+Improved layout and functionality of the footer popup
+
+![Footer Popup](https://via.placeholder.com/600x300)
 
 ## Technology Stack
 
