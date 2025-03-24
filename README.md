@@ -1,6 +1,5 @@
 # Select Page UI Redesign
-
-![UI Screenshot](https://via.placeholder.com/800x400)
+![UI Screenshot](https://github.com/user-attachments/assets/b51e0a93-e507-404e-b147-25576612289c)
 
 ## Overview
 
@@ -12,34 +11,31 @@ This project focuses on the redesign and development of the Select Page UI in a 
 
 ### Demo Video
 
-[![Demo Video](https://via.placeholder.com/400x225)](https://your-video-link-here)
+![Demo Video](https://github.com/user-attachments/assets/ef70fb07-6cb8-4eb7-ac9a-104e75f51898)
 
 ## Key Improvements
 
 ### Enhanced Tags System
 Added new tags in JSON such as "Allowed on road" and "Heavy waste OK"
 
-![Tags System](https://via.placeholder.com/600x300)
+![tagssystem](https://github.com/user-attachments/assets/2d264fc3-67a0-44aa-aa36-5406495c8801)
 
 ### Fixed Duplication Issue
 Removed duplicate size information that previously appeared in both title and tags
 
-![Duplication Fix](https://via.placeholder.com/600x300)
+![Duplication Fix](https://github.com/user-attachments/assets/b0dfc6f1-8d2d-4f65-ae83-6351c29a7589)
 
 ### Improved Visual Design
 Implemented new animations and color schemes for better readability
 
-![Visual Design](https://via.placeholder.com/600x300)
+![Visual Design](https://github.com/user-attachments/assets/11015a02-74de-40ed-9816-b3ef53171c35)
+
+![Selection UI](https://github.com/user-attachments/assets/3f765584-09d7-41ef-96e4-811ab8d0d4b0)
 
 ### Bug Fixes
 Resolved critical bug preventing users from deselecting already selected cards
 
-![Bug Fix Demonstration](https://via.placeholder.com/600x300)
-
-### Redesigned Footer Popup
-Improved layout and functionality of the footer popup
-
-![Footer Popup](https://via.placeholder.com/600x300)
+![Bug Fix Demonstration](https://github.com/user-attachments/assets/830595a7-b213-4a0a-9e8a-3ab313ff69e8)
 
 ## Technology Stack
 
